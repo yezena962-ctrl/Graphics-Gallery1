@@ -1,0 +1,1203 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DMU GRAPHICS Gallery</title>
+    <!-- Tailwind CSS Script Layer Core -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- FontAwesome Vector Graphic Asset Engine -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    
+    <style>
+        :root {
+            --perspective-depth: 1400px;
+        }
+
+        body {
+            perspective: var(--perspective-depth);
+            background: radial-gradient(circle at 50% 50%, #5a96ce 0%, #53a4d6 100%);
+        }
+
+        /* 3D Interactive Card Transforming Matrix */
+        .card-3d-element {
+            transform-style: preserve-3d;
+            transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.5s ease;
+        }
+        .card-3d-element:hover {
+            transform: translateY(-10px) rotateX(6deg) rotateY(-3deg) translateZ(10px);
+            box-shadow: 0 30px 60px -15px rgba(166, 147, 183, 0.3);
+        }
+
+        /* 3D Colorful Animation Dynamic Overlay Background */
+        @keyframes colorful3DOverlayGradient {
+            0% { background-position: 0% 50%; transform: translateZ(-50px) rotate(0deg); }
+            50% { background-position: 100% 50%; transform: translateZ(-20px) rotate(3deg); }
+            100% { background-position: 0% 50%; transform: translateZ(-50px) rotate(0deg); }
+        }
+        .animate-3d-overlay-bg {
+            background: linear-gradient(-45deg, #48b8ec, #8b5cf6, #3b82f6, #10b981, #b7b1a6);
+            background-size: 400% 400%;
+            animation: colorful3DOverlayGradient 15s ease-in-out infinite;
+        }
+
+        /* Fluid 3D Banner Chromatic Movement Engine */
+        @keyframes dynamicBanner3D {
+            0% { background-position: 0% 50%; transform: rotateX(5deg) rotateY(-5deg); }
+            50% { background-position: 100% 50%; transform: rotateX(2deg) rotateY(2deg); }
+            100% { background-position: 0% 50%; transform: rotateX(5deg) rotateY(-5deg); }
+        }
+        .animate-3d-banner {
+            background: linear-gradient(135deg, #aa9fa1, #3b82f6, #10b981, #46c2ef, #0ba7f5);
+            background-size: 300% 300%;
+            animation: dynamicBanner3D 12s ease-in-out infinite;
+            transform-style: preserve-3d;
+        }
+
+        /* Pulse Text Scaling Depth Engine */
+        @keyframes textDepthPulse {
+            0%, 100% { transform: translateZ(40px) scale(1); text-shadow: 0 0 15px rgba(127, 164, 202, 0.2); }
+            50% { transform: translateZ(70px) scale(1.05); text-shadow: 0 0 30px rgba(255,255,255,0.8); }
+        }
+        .animate-text-3d {
+            animation: textDepthPulse 4s ease-in-out infinite;
+        }
+
+        /* Marquee Continuous Footer Rolling Text Engine */
+        @keyframes footerTickerRoll {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        .animate-footer-ticker {
+            animation: footerTickerRoll 25s linear infinite;
+        }
+
+        /* Equalizer Animation Layout Vectors */
+        @keyframes eqWaveForm {
+            0%, 100% { height: 6px; }
+            50% { height: 28px; }
+        }
+        .eq-bar { animation: eqWaveForm 0.6s ease-in-out infinite; }
+        .eq-bar:nth-child(2) { animation-delay: 0.15s; }
+        .eq-bar:nth-child(3) { animation-delay: 0.3s; }
+        .eq-bar:nth-child(4) { animation-delay: 0.45s; }
+
+        /* Rotate Animation Layout Utilities */
+        @keyframes deepSpaceOrbit {
+            0% { transform: rotate(0deg) translateZ(20px); }
+            100% { transform: rotate(360deg) translateZ(40px); }
+        }
+        .animate-orbit-3d { animation: deepSpaceOrbit 12s linear infinite; }
+    </style>
+</head>
+
+
+<body class="text-slate-100 min-h-screen flex flex-col font-sans select-none antialiased overflow-x-hidden">
+
+
+
+    <!.............................>
+
+
+
+    <!......................>
+
+    <!-- ================= 3D COLORFUL ANIMATION OVERLAY LOGIN PAGE LAYER ================= -->
+    <div id="securityOverlayGatekeeper" class="fixed inset-0 z-50 flex items-center justify-center p-4 transition-all duration-500">
+        <!-- 3D Moving Chromatic Animated Canvas Layer acting as Backdrop Overlay -->
+        <div class="absolute inset-0 animate-3d-overlay-bg filter blur-[2px]"></div>
+        <div class="absolute inset-0 bg-black/40 backdrop-blur-xl"></div>
+        
+
+
+
+        <!..........................>
+
+
+
+
+        <!..............................>
+        <!-- Interactive 3D Login Terminal Card Base Shell -->
+        <div class="bg-slate-950/90 border border-white/10 rounded-3xl w-full max-w-md p-8 shadow-2xl relative overflow-hidden transition-transform duration-700 transform" style="transform-style: preserve-3d; transform: rotateY(0deg) rotateX(10deg); box-shadow: 0 50px 100px -20px rgba(0,0,0,0.7);">
+            <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-cyan-400 via-pink-500 to-amber-400"></div>
+            
+            <div class="text-center mb-8" style="transform: translateZ(30px);">
+                <div class="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center mx-auto mb-4 border border-white/20 shadow-xl">
+                    <i id="lockGraphicIcon" class="fa-solid fa-cube text-3xl text-cyan-400 animate-spin" style="animation-duration: 4s;"></i>
+                </div>
+                <h2 id="loginPanelCoreTitle" class="text-2xl font-black uppercase tracking-widest text-white drop-shadow-md">Graphics Gallery
+                <p id="loginPanelSubTitle" class="text-xs text-slate-400 mt-1.5">Administrative via Gmail Secure Channels</p>
+            </div>
+
+
+            <!...............>
+
+
+
+            <!........................>
+            <!-- Login Access Formulation Interface Mapping Form -->
+            <form id="adminAccessRequestForm" onsubmit="evaluateAccessCredentials(event)" class="space-y-5" style="transform: translateZ(20px);">
+                <div>
+                    <label class="block text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1.5">Username</label>
+                    <div class="relative">
+                        <i class="fa-solid fa-user-shield absolute left-3.5 top-3.5 text-slate-500 text-xs"></i>
+                        <input type="text" id="credentialUserField" required class="w-full bg-black/60 border border-slate-800 rounded-xl pl-10 pr-4 py-3 text-xs text-white focus:outline-none focus:border-cyan-500 transition shadow-inner placeholder:text-slate-600" placeholder="••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1.5"> password</label>
+                    <div class="relative">
+                        <i class="fa-solid fa-lock absolute left-3.5 top-3.5 text-slate-500 text-xs"></i>
+                        <input type="password" id="credentialPasswordField" required class="w-full bg-black/60 border border-slate-800 rounded-xl pl-10 pr-4 py-3 text-xs text-white focus:outline-none focus:border-cyan-500 transition shadow-inner placeholder:text-slate-600" placeholder="••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••">
+                    </div>
+                </div>
+                
+                <div class="text-right">
+                    <button type="button" onclick="switchLoginInterfaceLayout('forget')" class="text-xs text-pink-400 hover:text-pink-300 transition hover:underline font-bold">Forgot password</button>
+                </div>
+
+                <!-- OVERLAY LOGIN FUNCTIONAL BUTTON -->
+                <button type="submit" class="w-full relative group overflow-hidden bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white font-black py-3.5 rounded-xl tracking-widest text-xs uppercase transition-all duration-300 transform active:scale-95 shadow-xl border border-white/10 cursor-pointer">
+                    <span class="relative z-10 flex items-center justify-center gap-2">login<i class="fa-solid fa-right-to-bracket"></i></span>
+                    <span class="absolute inset-0 bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                </button>
+            </form>
+
+            <!-- Forgot Password Administrative Recovery Interface Mapping Form -->
+            <form id="adminKeyRecoveryForm" onsubmit="executeBypassRecoveryTokenDispatch(event)" class="space-y-5 hidden" style="transform: translateZ(20px);">
+                <p class="text-xs text-slate-400 leading-relaxed bg-white/5 p-3.5 rounded-xl border border-white/5">Input your target administrator verification Gmail credentials mapping profile address. The security engine framework will send a token bypass signal connection script parameters list.</p>
+                <div>
+                    <label class="block text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1.5">Target Registered Master Gmail Account</label>
+                    <div class="relative">
+                        <i class="fa-solid fa-envelope-open-text absolute left-3.5 top-3.5 text-slate-500 text-xs"></i>
+                        <input type="email" id="recoveryTargetGmailField" required class="w-full bg-black/60 border border-slate-800 rounded-xl pl-10 pr-4 py-3 text-xs text-white focus:outline-none focus:border-pink-500 transition shadow-inner placeholder:text-slate-600" placeholder="admin@gmail.com">
+                    </div>
+                </div>
+                <button type="submit" class="w-full bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 text-white font-black py-3.5 rounded-xl tracking-widest text-xs uppercase transition transform active:scale-95 shadow-lg cursor-pointer">
+                    Dispatch Recovery Directive Matrix
+                </button>
+                <button type="button" onclick="switchLoginInterfaceLayout('login')" class="w-full bg-transparent text-slate-400 border border-slate-800 hover:bg-white/5 text-[10px] font-black uppercase tracking-wider py-2.5 rounded-xl transition cursor-pointer">
+                    Return to Ingress Terminal Block
+                </button>
+            </form>
+
+            <!-- Dynamic Feedback Output Messaging Element Box Alerts (Allow/Deny) -->
+            <div id="gatekeeperSecurityAlertNotification" class="mt-5 p-3.5 rounded-xl text-xs font-bold text-center hidden transform translate-z-10"></div>
+        </div>
+    </div>
+
+    <!-- ================= MASTER SYSTEM APPLICATION CORE DASHBOARD WRAPPER ================= -->
+    <div id="systemDashboardCoreShell" class="hidden flex-col min-h-screen opacity-0 transition-opacity duration-700">
+
+        <!-- ================= HEADER SECTION CONSOLE WITH CONTROL MENUS ================= -->
+        <header class="bg-slate-950/80 border-b border-white/5 sticky top-0 z-40 px-6 py-3.5 flex flex-wrap items-center justify-between gap-4 shadow-2xl backdrop-blur-md">
+            
+            <!-- Dynamic Institution Branding Information Container Array Module -->
+            <div class="flex items-center space-x-3.5">
+                <!-- FUNCTIONAL UPDATE LOGO BUTTON Wrapper Shell -->
+                <button onclick="executeBrandLogoSymbolTransformation()" id="systemLogoIdentityBadgeNode" class="w-11 h-11 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 text-cyan-400 rounded-xl border border-cyan-500/30 flex items-center justify-center text-lg shadow-inner transition transform hover:scale-105 hover:rotate-12 cursor-pointer group" title="Click Function Button to Update Logo Graphic Design">
+                    <i class="fa-solid fa-cubes group-hover:text-white transition"></i>
+                </button>
+                <div>
+                    <!-- Dynamic Text Node updated via update institution name functional button -->
+                    <h1 id="brandInstitutionTitleNode" class="font-black text-xs tracking-widest text-white uppercase drop-shadow">Graphics Gallery Institutional Terminal</h1>
+                    <div class="flex items-center gap-1.5 mt-1">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+                        <span id="authenticatedIdentityRegistryBadge" class="text-[9px] text-emerald-400 font-mono tracking-wider uppercase font-bold"> Channel: Connected</span>
+                    </div>
+                </div>
+            </div>
+
+            <!.........................>
+<!-- FUNCTIONAL UPDATE LOGO BUTTON (Header Option Alternative) -->
+                
+                
+                <!-- UPDATE INSTITUTION NAME FUNCTIONAL BUTTON -->
+                <button onclick="executeBrandTextTransformation()" class="bg-slate-900 hover:bg-slate-800 text-[10px] text-slate-200 px-3 py-2 rounded-xl font-black border border-white/5 shadow transition flex items-center gap-1.5 uppercase tracking-wider cursor-pointer" title="Rename Dynamic Branding Label Workspace String Parameters">
+                    <i class="fa-solid fa-signature text-purple-400"></i> Update Institution Name
+                </button>
+
+            <!..........................>
+
+            <!-- Functional Navigation System Cluster with Floating Dropping Lists -->
+            <nav class="flex items-center space-x-1 bg-black/60 p-1 rounded-xl border border-white/5 shadow-inner">
+                <!-- Dropdown Array Element Block: FUNCTIONAL HOME WITH LISTE -->
+                <div class="relative group">
+                    <button class="px-3 py-2 rounded-lg text-xs font-black tracking-wider text-slate-300 hover:bg-white/5 hover:text-white flex items-center gap-2 transition cursor-pointer">
+                        <i class="fa-solid fa-house text-cyan-400"></i> HOME <i class="fa-solid fa-chevron-down text-[8px] opacity-40"></i>
+                    </button>
+                    <div class="absolute left-0 mt-2 w-52 bg-slate-950 border border-white/10 rounded-xl shadow-2xl py-1.5 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 z-50 transform origin-top scale-95 group-hover:scale-100">
+                     <a href="#" onclick="alert('Routing Action: Core Master Portfolio Hub')" class="block px-4 py-2.5 text-[11px] text-slate-300 hover:bg-white/5 hover:text-cyan-400 font-bold uppercase tracking-wider"><i class="fa-solid fa-cubes-stacked mr-2 text-center w-4"></i> Audio file </a>
+                     <a href="#" onclick="alert('Routing Action: Live Matrix Statistics logs')" class="block px-4 py-2.5 text-[11px] text-slate-300 hover:bg-white/5 hover:text-cyan-400 font-bold uppercase tracking-wider"><i class="fa-solid fa-chart-line mr-2 text-center w-4"></i> Video file</a>
+
+                    <a href="#" onclick="alert('Routing Action: Live Matrix Statistics logs')" class="block px-4 py-2.5 text-[11px] text-slate-300 hover:bg-white/5 hover:text-cyan-400 font-bold uppercase tracking-wider"><i class="fa-solid fa-chart-line mr-2 text-center w-4"></i>Document file <a>
+                    <a href="#" onclick="alert('Routing Action: Live Matrix Statistics logs')" class="block px-4 py-2.5 text-[11px] text-slate-300 hover:bg-white/5 hover:text-cyan-400 font-bold uppercase tracking-wider"><i class="fa-solid fa-chart-line mr-2 text-center w-4"></i>
+
+Emage file <a>
+
+                    <a href="#" onclick="alert('Routing Action: Live Matrix Statistics logs')" class="block px-4 py-2.5 text-[11px] text-slate-300 hover:bg-white/5 hover:text-cyan-400 font-bold uppercase tracking-wider"><i class="fa-solid fa-chart-line mr-2 text-center w-4"></i>any file <a>
+
+                   
+                    </div>
+                </div>
+
+                <!-- Dropdown Array Element Block: FUNCTIONAL SERVISE WITH LIST -->
+                <div class="relative group">
+                    
+                    <div class="absolute left-0 mt-2 w-56 bg-slate-950 border border-white/10 rounded-xl shadow-2xl py-1.5 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 z-50 transform origin-top scale-95 group-hover:scale-100">
+                        <a href="#" onclick="alert('Service Invoke: Distributed Edge Data Processing Array')" class="block px-4 py-2.5 text-[11px] text-slate-300 hover:bg-white/5 hover:text-purple-400 font-bold uppercase tracking-wider"><i class="fa-solid fa-bolt mr-2 text-center w-4"></i> High-Speed Processing</a>
+                        <a href="#" onclick="alert('Service Invoke: Transcoding Engine Integration Framework')" class="block px-4 py-2.5 text-[11px] text-slate-300 hover:bg-white/5 hover:text-purple-400 font-bold uppercase tracking-wider"><i class="fa-solid fa-arrows-spin mr-2 text-center w-4"></i> Hardware Converter</a>
+                    </div>
+                </div>
+
+                <!-- Direct Trigger Anchor Function: FUNCTIONAL ABUTE -->
+                <button onclick="displayAboutInformationModalDialog()" class="px-3 py-2 rounded-lg text-xs font-black tracking-wider text-slate-300 hover:bg-white/5 hover:text-white flex items-center gap-1.5 transition cursor-pointer">
+                    <h class="fa-solid fa-circle-nodes text-emerald-400"></h> 
+                </button>
+                <!.......................>
+<nav class="flex flex-wrap items-center gap-4">
+                <button onclick="alert('About Debre Markos University Graphics Gallery System initialized.')" class="px-4 py-2 hover:text-cyan-400 transition-colors">About</button>
+                <button onclick="alert('Services Layer Active')" class="px-4 py-2 hover:text-pink-400 transition-colors">Services</button>
+                <button onclick="alert('Contact Support: admin@dmu.edu.et DAWITYENALEM21@GMAIL.COM 0968851675')" class="px-4 py-2 hover:text-yellow-400 transition-colors">Contact</button>
+                
+
+                <!.................>
+                <!-- Direct Trigger Anchor Function: FUNCTIONAL CONTACT -->
+                
+            </nav>
+
+            <!-- Administrative Tuning Modification Panel Controls Interface Node Cluster Block -->
+            <div class="flex items-center space-x-2">
+                
+
+                <!-- FUNCTIONAL SETTING INCLUDING SETING FECHURE BUTTON -->
+                <button onclick="toggleSystemSettingsInterfaceDisplay(true)" class="bg-slate-900 hover:bg-slate-800 text-slate-200 p-2 rounded-xl border border-white/5 shadow transition flex items-center justify-center cursor-pointer" title="Configure System Feature Toggle Switches">
+                    <i class="fa-solid fa-sliders text-amber-400"></i>
+                </button>
+
+                <!-- LOGOUT FUNCTIONAL BUTTON -->
+                <button onclick="terminateActiveSecureSessionSequence()" class="bg-rose-950/40 hover:bg-rose-900/60 text-rose-400 px-3 py-2 rounded-xl text-xs font-black border border-rose-900/30 transition flex items-center gap-1.5 shadow tracking-wider uppercase cursor-pointer">
+                    <i class="fa-solid fa-power-off"></i> Logout
+                </button>
+            </div>
+        </header>
+
+
+<!...........................................>
+    
+
+        <!.............................>
+        <!-- ================= MAIN COLUMN MATRIX INTERFACE GRID ================= -->
+        <main class="flex-1 grid grid-cols-1 lg:grid-cols-12 gap-6 p-6">
+            
+            <!-- LEFT WORKSPACE INTERFACE SECTION: Categorized Type Filters Extensions Layout -->
+            <section class="lg:col-span-3 space-y-4">
+                <div class="bg-slate-950/40 border border-white/5 rounded-2xl p-4 shadow-xl backdrop-blur-md">
+                    <h3 class="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-3.5 flex items-center justify-between">
+                        <span>Directory Mapped Extension Filtering Matrix</span>
+                        <i class="fa-solid fa-filter text-slate-600"></i>
+                    </h3>
+                    
+                    <div class="space-y-2.5">
+                        <!-- AUDIO WITH MP3 AND ICON functional button -->
+                        <button onclick="executeFilterDatabasePortfolioRows('audio')" class="w-full flex items-center justify-between p-3 bg-black/40 hover:bg-white/5 border border-white/5 hover:border-amber-500/40 rounded-xl transition-all duration-300 group text-left card-3d-element cursor-pointer">
+                            <span class="flex items-center space-x-3">
+                                <span class="w-9 h-9 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-400 border border-amber-500/20 shadow-inner"><i class="fa-solid fa-music"></i></span>
+                                <div>
+                                    <h4 class="text-xs font-black tracking-wide text-slate-200">All Audio Graphics file-items</h4>
+                                    <p class="text-[9px] text-slate-500 font-mono font-bold">Structure: MP3 Architecture</p>
+                                </div>
+                            </span>
+                            <i class="fa-solid fa-arrow-right-long text-[10px] text-slate-700 group-hover:text-amber-400 transition transform group-hover:translate-x-1"></i>
+                        </button>
+                        
+                        <!-- VIDOE MP4 WITH ICON functional button -->
+                        <button onclick="executeFilterDatabasePortfolioRows('video')" class="w-full flex items-center justify-between p-3 bg-black/40 hover:bg-white/5 border border-white/5 hover:border-rose-500/40 rounded-xl transition-all duration-300 group text-left card-3d-element cursor-pointer">
+                            <span class="flex items-center space-x-3">
+                                <span class="w-9 h-9 rounded-xl bg-rose-500/10 flex items-center justify-center text-rose-400 border border-rose-500/20 shadow-inner"><i class="fa-solid fa-video"></i></span>
+                                <div>
+                                    <h4 class="text-xs font-black tracking-wide text-slate-200">All Video Graphics file-items</h4>
+                                    <p class="text-[9px] text-slate-500 font-mono font-bold">Structure: MP4 Pipeline Stream</p>
+                                </div>
+                            </span>
+                            <i class="fa-solid fa-arrow-right-long text-[10px] text-slate-700 group-hover:text-rose-400 transition transform group-hover:translate-x-1"></i>
+                        </button>
+
+                        <!-- IMAGE WITH JPEG AND AICON functional button -->
+                        <button onclick="executeFilterDatabasePortfolioRows('image')" class="w-full flex items-center justify-between p-3 bg-black/40 hover:bg-white/5 border border-white/5 hover:border-cyan-500/40 rounded-xl transition-all duration-300 group text-left card-3d-element cursor-pointer">
+                            <span class="flex items-center space-x-3">
+                                <span class="w-9 h-9 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 border border-cyan-500/20 shadow-inner"><i class="fa-solid fa-file-image"></i></span>
+                                <div>
+                                    <h4 class="text-xs font-black tracking-wide text-slate-200">All Image Graphics file-items</h4>
+                                    <p class="text-[9px] text-slate-500 font-mono font-bold">Structure: JPEG Image Format</p>
+                                </div>
+                            </span>
+                            <i class="fa-solid fa-arrow-right-long text-[10px] text-slate-700 group-hover:text-cyan-400 transition transform group-hover:translate-x-1"></i>
+                        </button>
+
+                        <!-- document with pdf or doc with icon functional button -->
+                        <button onclick="executeFilterDatabasePortfolioRows('document')" class="w-full flex items-center justify-between p-3 bg-black/40 hover:bg-white/5 border border-white/5 hover:border-emerald-500/40 rounded-xl transition-all duration-300 group text-left card-3d-element cursor-pointer">
+                            <span class="flex items-center space-x-3">
+                                <span class="w-9 h-9 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 border border-emerald-500/20 shadow-inner"><i class="fa-solid fa-file-shield"></i></span>
+                                <div>
+                                    <h4 class="text-xs font-black tracking-wide text-slate-200">All Documents Graphics file-items</h4>
+                                    <p class="text-[9px] text-slate-500 font-mono font-bold">Structure: PDF or DOC Records</p>
+                                </div>
+                            </span>
+                            <i class="fa-solid fa-arrow-right-long text-[10px] text-slate-700 group-hover:text-emerald-400 transition transform group-hover:translate-x-1"></i>
+                        </button>
+                    </div>
+
+                    <button onclick="executeFilterDatabasePortfolioRows('all')" class="w-full mt-5 text-[10px] font-black tracking-widest text-center bg-slate-900 hover:bg-slate-800 text-slate-200 py-3 rounded-xl border border-white/5 transition uppercase shadow-inner cursor-pointer">
+                        All Graphics file-items
+                    </button>
+                </div>
+            </section>
+
+            <!-- CENTER WORKSPACE MAIN SECTION: Colorful 3D Animation Banner Canvas & Media Portfolio Display -->
+            <section class="lg:col-span-6 space-y-6 flex flex-col">
+                
+                <!-- COLORE FULL ANMANTION BANNER WITH ANMATED TEXTE WITH ANMATE TEXET IN MAIN SACTION -->
+                <div class="animate-3d-banner text-white rounded-3xl p-6 shadow-2xl relative flex flex-col justify-between min-h-[14rem] border border-white/10 overflow-hidden">
+                    <div class="absolute inset-0 bg-black/10"></div>
+                    
+                    <div class="z-10">
+                            
+                        
+                        </span>
+                        <!-- Animated text with animate text inside colorful animation banner -->
+                        <h2 class="text-2xl font-black mt-3 drop-shadow-lg tracking-tight uppercase animate-text-3d inline-block">
+                             Debre Markos University Graphics Gallery
+
+                        </h2>
+                    </div>
+
+
+                    <html>
+<head>
+<style>
+h1 {text-align: center;}
+p {text-align: center;}
+div {text-align: center;}
+</style>
+</head>
+<body>
+
+<h1> 
+</h1>
+
+
+</body>
+</html>
+                    <!-- AUDIO GRAFICSE, VIDO GRAFICSE , IMAGE GRAFICSE , PDF OR DOC DOCUMENT ANMATED GRAFICSE WITH FULL SCREEN -->
+                    <div class="grid grid-cols-4 gap-2 bg-slate-950/70 backdrop-blur-md p-3 rounded-2xl border border-white/10 z-10 text-center">
+                        <!-- Audio graphics animated element -->
+                        <div class="text-amber-400 text-[8px] font-black flex flex-col items-center justify-center border border-amber-500/20 p-2 rounded-xl bg-amber-950/20">
+                            <div class="flex items-end justify-center space-x-0.5 h-7 mb-2">
+                                <span class="eq-bar w-1 bg-amber-400 rounded-full"></span>
+                                <span class="eq-bar w-1 bg-amber-400 rounded-full"></span>
+                                <span class="eq-bar w-1 bg-amber-400 rounded-full"></span>
+                                <span class="eq-bar w-1 bg-amber-400 rounded-full"></span>
+                            </div>
+                            Audio Graphics
+                        </div>
+                        <!-- Video graphics animated element -->
+                        <div class="text-rose-400 text-[8px] font-black flex flex-col items-center justify-center border border-rose-500/20 p-2 rounded-xl bg-rose-950/20">
+                            <div class="h-7 flex items-center justify-center mb-2">
+                                <i class="fa-solid fa-compact-disc text-2xl animate-spin" style="animation-duration: 2.5s;"></i>
+                            </div>
+                            Video Graphics
+                        </div>
+                        <!-- Image graphics animated element -->
+                        <div class="text-cyan-400 text-[8px] font-black flex flex-col items-center justify-center border border-cyan-500/20 p-2 rounded-xl bg-cyan-950/20">
+                            <div class="h-7 flex items-center justify-center mb-2">
+                                <i class="fa-solid fa-wand-magic-sparkles text-xl animate-orbit-3d"></i>
+                            </div>
+                            Image Graphics
+                        </div>
+                        <!-- PDF or DOC document animated graphics element -->
+                        <div class="text-emerald-400 text-[8px] font-black flex flex-col items-center justify-center border border-emerald-500/20 p-2 rounded-xl bg-emerald-950/20">
+                            <div class="h-7 flex items-center justify-center mb-2">
+                                <i class="fa-solid fa-shield-halved text-xl animate-bounce"></i>
+                            </div>
+                            Document Graphics
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Grid Header Layout Anchors Row -->
+                <div class="flex items-center justify-between border-b border-white/5 pb-2">
+                    <h3 class="font-black text-xs tracking-widest text-white uppercase flex items-center gap-2">
+                        <i class="fa-solid fa-layer-group text-cyan-500"></i> Functional Portfolio Scope Channels
+                    </h3>
+                    <span id="activeGridFilterBadgeDisplay" class="bg-purple-950 text-purple-400 border border-purple-800/40 px-2.5 py-0.5 rounded font-mono text-[9px] uppercase font-black">
+                        Scope Index: ALL
+                    </span>
+                </div>
+
+                <!-- Master Viewport Grid Container Element for Target Portfolio Renderings -->
+                <div id="applicationMediaGridPortfolioDomContainer" class="grid grid-cols-1 md:grid-cols-2 gap-4 flex-1 overflow-y-auto pr-1">
+                    <!-- Javascript builds interactive cards arrays inside here dynamically -->
+                </div>
+            </section>
+
+            <!-- RIGHT SECTION WORKSPACE INTERFACE: Computer and Mobile Dual-Pipeline File Ingestion Uploads -->
+            <section class="lg:col-span-3">
+                <div class="bg-slate-950/40 border border-white/5 rounded-2xl p-5 shadow-xl text-center space-y-4 sticky top-24 backdrop-blur-md transform" style="transform-style: preserve-3d;">
+                    <div class="w-12 h-12 rounded-2xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-xl mx-auto border border-purple-500/20 shadow-inner">
+                        <i class="fa-solid fa-arrow-up-from-bracket animate-pulse"></i>
+                    </div>
+
+                    
+                    <div>
+
+                        <!..................>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search Bar with Icon</title>
+<style>
+/* Scoped styles to avoid interference */
+.search-widget {
+    display: flex;
+    align-items: center;
+    max-width: 300px;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.search-widget input {
+    flex: 1;
+    border: none;
+    padding: 8px 12px;
+    outline: none;
+    font-size: 14px;
+}
+
+.search-widget button {
+    background-color: #007BFF;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-widget button:hover {
+    background-color: #0056b3;
+}
+
+.search-widget button i {
+    color: white;
+    font-size: 16px;
+}
+</style>
+<!-- Font Awesome for search icon -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Search Bar -->
+<div class="search-widget">
+    <input type="text" id="searchInput" placeholder="Search...">
+    <button id="searchBtn" aria-label="Search">
+        <i class="fas fa-search"></i>
+    </button>
+</div>
+
+<script>
+// Scoped JavaScript to avoid global conflicts
+(function() {
+    const searchBtn = document.getElementById('searchBtn');
+    const searchInput = document.getElementById('searchInput');
+
+    searchBtn.addEventListener('click', function() {
+        const query = searchInput.value.trim();
+        if (query) {
+            alert("Searching for: " + query);
+            // You can replace alert with your actual search logic
+        } else {
+            alert("Please enter a search term.");
+        }
+    });
+
+    // Optional: Trigger search on Enter key
+    searchInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            searchBtn.click();
+        }
+    });
+})();
+</script>
+
+</body>
+</html>
+
+<!............................................>
+
+                        
+                        <h3 class="text-xs font-black uppercase tracking-widest text-slate-200">Terminal Ingest Pipeline</h3>
+                        <p class="text-[10px] text-slate-400 mt-1.5 leading-relaxed">
+                            Process and compile instant real multimedia uploads straight from native local computer file storage registers or mobile system memory blocks.
+                        </p>
+                    </div>
+                    
+                    <!-- UPLODE VIDOE (MP4), AUDIO (MP3), IMAGE (JPEG OR PDF), DOCUMENT (PDF OR DOC) FROM COMPUTER AND MOBILE WITH ICON -->
+                    <div class="bg-black/60 border border-white/5 rounded-xl p-4 text-left space-y-3 shadow-inner">
+                        <div>
+                            <label class="block text-[9px] font-black text-slate-400 uppercase tracking-wider mb-1.5">Asset System Label Designation</label>
+                            <input type="text" id="ingestAssetCustomNameInput" class="w-full bg-slate-900 border border-slate-800 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-purple-500 shadow-inner placeholder:text-slate-600" placeholder="E.g., Production Master Sequence">
+                        </div>
+                        <div>
+                            <label class="block text-[9px] font-black text-slate-400 uppercase tracking-wider mb-1.5">Target Graphics Stream Source</label>
+                            
+                            <!-- Hidden Native Native Device Input Element Framework for Laptop / Mobile Ingest -->
+                            <input type="file" id="nativeHardwareDeviceFileInputTrigger" class="hidden" onchange="extractDeviceFileSelectionMetadataParameters(this)" accept=".mp3,.mp4,.jpeg,.jpg,.pdf,.doc,.docx">
+                            
+                            <!-- Trigger Button In Left Section Mapping Action to Hidden Upload Element Array -->
+                            <button onclick="document.getElementById('nativeHardwareDeviceFileInputTrigger').click()" class="w-full bg-slate-900 hover:bg-slate-800 border border-slate-800 py-2 px-3 rounded-lg text-left text-xs text-slate-400 flex items-center justify-between transition group cursor-pointer">
+                                <span id="hardwareDeviceFileUploadPlaceholderLabelText" class="truncate pr-2">  </span>
+                                <!...............................>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered & Bold Text</title>
+    <style>
+        /* CSS to center and bold text */
+        .center-bold {
+            text-align: center; /* Centers the text horizontally */
+            font-weight: bold;  /* Makes the text bold */
+            font-size: 50px;    /* Optional: Increase font size */
+        }
+    </style>
+</head>
+
+
+<!............................................................>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Select File Example</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+    #fileName {
+        margin-top: 10px;
+        font-weight: bold;
+        color: green;
+    }
+</style>
+</head>
+<body>
+
+    <!..........................>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bold Header with Background</title>
+<style>
+    
+    
+</style>
+</head>
+<body>
+
+<header>
+    🚀 SELECT FILE
+</header>
+
+
+
+</body>
+</html>
+
+    <!.....................................>
+
+
+
+<!-- Hidden file input -->
+<input type="file" id="fileInput" style="display:none">
+
+<!-- Button to trigger file selection -->
+<button id="selectBtn">Select File</button>
+
+<!-- Display selected file name -->
+<div id="fileName">No file selected</div>
+
+<script>
+    const fileInput = document.getElementById('fileInput');
+    const selectBtn = document.getElementById('selectBtn');
+    const fileNameDisplay = document.getElementById('fileName');
+
+    // Trigger file dialog when button is clicked
+    selectBtn.addEventListener('click', () => {
+        fileInput.click();
+    });
+
+    // Handle file selection
+    fileInput.addEventListener('change', () => {
+        if (fileInput.files.length > 0) {
+            const file = fileInput.files[0];
+            fileNameDisplay.textContent = `Selected: ${file.name}`;
+        } else {
+            fileNameDisplay.textContent = "No file selected";
+        }
+    });
+</script>
+
+</body>
+</html>
+
+                                <!..............................>
+                                <i class="fa-solid fa-laptop-mobile text-purple-400 group-hover:scale-110 transition"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <button onclick="commitSelectedFileToPortfolioDatabaseRegistry()" class="w-full bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white font-black py-3 px-4 rounded-xl text-xs tracking-wider uppercase transition shadow-xl flex items-center justify-center gap-2 border border-white/10 transform active:scale-95 cursor-pointer">
+                        <i class="fa-solid fa-server"></i> Upload file
+                    </button>
+                </div>
+            </section>
+        </main>
+
+        <!-- ================= FULL SCREEN GRAPHICS LIGHTBOX VISUALIZATION VIEWPORT CONTAINER PORTAL ================= -->
+        <div id="fullscreenVisualizationPortal" class="fixed inset-0 bg-black/95 hidden z-50 flex-col items-center justify-center p-6 transition-all duration-300 backdrop-blur-lg">
+            <button onclick="terminateFullscreenPortalDisplay()" class="absolute top-6 right-6 text-slate-500 hover:text-white text-3xl transition transform hover:rotate-90 cursor-pointer">
+                <i class="fa-solid fa-circle-xmark"></i>
+            </button>
+            <div id="fullscreenMediaAnchorNode" class="w-full max-w-4xl max-h-[75vh] flex items-center justify-center p-2 rounded-3xl overflow-hidden shadow-2xl">
+                <!-- Javascript maps processing element arrays context lines inside here dynamically -->
+            </div>
+            <h4 id="fullscreenVisualizerTitleLabelText" class="text-xs font-black mt-5 tracking-widest text-center text-slate-400 uppercase bg-slate-900 px-5 py-2.5 border border-white/5 rounded-full shadow-inner"></h4>
+        </div>
+
+        <!-- ================= SYSTEM CONFIGURATION SETTINGS PANEL MODAL SWITCHES ARRAY ================= -->
+        <div id="systemGlobalConfigurationSettingsPanel" class="fixed inset-0 bg-black/80 backdrop-blur-sm hidden z-50 items-center justify-center p-4">
+            <div class="bg-gradient-to-b from-slate-900 to-slate-950 border border-white/10 w-full max-w-md p-6 rounded-2xl shadow-2xl space-y-4">
+                <div class="flex items-center justify-between border-b border-white/5 pb-3">
+                    <h3 class="font-black text-xs text-amber-400 flex items-center gap-2 uppercase tracking-wider">
+                        <i class="fa-solid fa-gears"></i> Engine Custom Feature Settings Panel
+                    </h3>
+                    <button onclick="toggleSystemSettingsInterfaceDisplay(false)" class="text-slate-500 hover:text-white transition cursor-pointer"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between p-3 bg-black/40 rounded-xl border border-white/5">
+                        <div>
+                            <p class="text-xs font-bold text-slate-200">Enforce Perspective Layout Math Matrix</p>
+                            <p class="text-[9px] text-slate-500 font-medium">Runs advanced depth rotations on hover triggers.</p>
+                        </div>
+                        <input type="checkbox" checked class="accent-cyan-500 w-4 h-4 rounded">
+                    </div>
+                    <div class="flex items-center justify-between p-3 bg-black/40 rounded-xl border border-white/5">
+                        <div>
+                            <p class="text-xs font-bold text-slate-200">Run Dynamic Chromatic Color Overlays</p>
+                            <p class="text-[9px] text-slate-500 font-medium">Toggles dynamic backgrounds execution profiles.</p>
+                        </div>
+                        <input type="checkbox" checked class="accent-cyan-500 w-4 h-4 rounded">
+                    </div>
+                </div>
+                <button onclick="toggleSystemSettingsInterfaceDisplay(false)" class="w-full mt-2 bg-slate-800 hover:bg-slate-700 py-3 rounded-xl text-xs text-slate-200 font-black uppercase border border-white/5 transition cursor-pointer">
+                    Commit Changes Matrix
+                </button>
+            </div>
+        </div>
+
+
+        <!........................>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3D Animated Footer</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #111;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    /* Footer container */
+    footer {
+        position: relative;
+        background: linear-gradient(270deg, #ff0080, #7928ca, #00dbde);
+        background-size: 600% 600%;
+        animation: gradientShift 10s ease infinite;
+        perspective: 1000px;
+        padding: 30px 20px;
+        text-align: center;
+        transform-style: preserve-3d;
+    }
+
+    /* 3D floating effect */
+    footer:hover {
+        transform: rotateX(5deg) rotateY(-5deg) scale(1.02);
+        transition: transform 0.5s ease;
+    }
+
+    /* Footer text */
+    footer h2 {
+        margin: 0;
+        font-size: 1.8rem;
+        text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    }
+
+    footer p {
+        margin: 5px 0 0;
+        font-size: 1rem;
+        opacity: 0.9;
+    }
+
+    /* Gradient animation */
+    @keyframes gradientShift {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    /* Social links */
+    .social-links {
+        margin-top: 15px;
+    }
+
+    .social-links a {
+        display: inline-block;
+        margin: 0 10px;
+        color: white;
+        font-size: 1.4rem;
+        text-decoration: none;
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .social-links a:hover {
+        transform: translateY(-5px) scale(1.2);
+        color: yellow;
+    }
+</style>
+</head>
+<body>
+
+<main style="flex:1; display:flex; align-items:center; justify-content:center;">
+</main>
+
+
+
+</body>
+</html>
+
+        <!.........................>
+        <!-- ================= FOOTER WITH TEXT ANMANTION OF FOOTER MARQUEE LOOP ================= -->
+        <footer class="bg-slate-950 border-t border-white/5 h-9 overflow-hidden relative flex items-center shadow-2xl">
+            <div class="w-full whitespace-nowrap flex items-center">
+                <!-- Text animation of footer marquee ticker element -->
+                <div class="inline-block animate-footer-ticker text-[18px] font-mono text-purple-800 font-bold uppercase tracking-widest">
+                                   
+                    <h>Debre markos univercty graphics galary Graphics Gallery PLATFORM TELEMETRY OPERATIONAL METRICS: STATUS ACTIVE // VERIFIED ACCESS METHOD PROTOCOL: ALLOW PRIVILEGES DISPATCHED // CONNECTED TO MASTER ADMINISTRATIVE GMAIL ACCOUNT DIRECT ENTRY LINK NODES // PORTFOLIO DATA PIPELINE REPOSITORIES EXTENSION FILTERS: AUDIO WITH MP3 CHANNELS AND ICON BUTTON, VIDEO WITH MP4 PIPELINE AND ICON BUTTON, IMAGE WITH JPEG AND ICON BUTTON, DOCUMENT WITH PDF OR DOC AND ICON FUNCTIONAL BUTTON RUNNING STREAMS VERIFIED OK ⚡</h>⚡ 
+<hi>Debre markos univercty graphics galary </h>                    <h>Debre markos univercty graphics galary Graphics Gallery PLATFORM TELEMETRY OPERATIONAL METRICS: STATUS ACTIVE // VERIFIED ACCESS METHOD PROTOCOL: ALLOW PRIVILEGES DISPATCHED // CONNECTED TO MASTER ADMINISTRATIVE GMAIL ACCOUNT DIRECT ENTRY LINK NODES // PORTFOLIO DATA PIPELINE REPOSITORIES EXTENSION FILTERS: AUDIO WITH MP3 CHANNELS AND ICON BUTTON, VIDEO WITH MP4 PIPELINE AND ICON BUTTON, IMAGE WITH JPEG AND ICON BUTTON, DOCUMENT WITH PDF OR DOC AND ICON FUNCTIONAL BUTTON RUNNING STREAMS VERIFIED OK ⚡</h>⚡     <h>Debre markos univercty graphics galary Graphics Gallery PLATFORM TELEMETRY OPERATIONAL METRICS: STATUS ACTIVE // VERIFIED ACCESS METHOD PROTOCOL: ALLOW PRIVILEGES DISPATCHED // CONNECTED TO MASTER ADMINISTRATIVE GMAIL ACCOUNT DIRECT ENTRY LINK NODES // PORTFOLIO DATA PIPELINE REPOSITORIES EXTENSION FILTERS: AUDIO WITH MP3 CHANNELS AND ICON BUTTON, VIDEO WITH MP4 PIPELINE AND ICON BUTTON, IMAGE WITH JPEG AND ICON BUTTON, DOCUMENT WITH PDF OR DOC AND ICON FUNCTIONAL BUTTON RUNNING STREAMS VERIFIED OK ⚡</h>⚡ 
+
+                
+                    <h>Debre markos univercty graphics galary Graphics Gallery PLATFORM TELEMETRY OPERATIONAL METRICS: STATUS ACTIVE // VERIFIED ACCESS METHOD PROTOCOL: ALLOW PRIVILEGES DISPATCHED // CONNECTED TO MASTER ADMINISTRATIVE GMAIL ACCOUNT DIRECT ENTRY LINK NODES // PORTFOLIO DATA PIPELINE REPOSITORIES EXTENSION FILTERS: AUDIO WITH MP3 CHANNELS AND ICON BUTTON, VIDEO WITH MP4 PIPELINE AND ICON BUTTON, IMAGE WITH JPEG AND ICON BUTTON, DOCUMENT WITH PDF OR DOC AND ICON FUNCTIONAL BUTTON RUNNING STREAMS VERIFIED OK ⚡</h>⚡     <h>Debre markos univercty graphics galary Graphics Gallery PLATFORM TELEMETRY OPERATIONAL METRICS: STATUS ACTIVE // VERIFIED ACCESS METHOD PROTOCOL: ALLOW PRIVILEGES DISPATCHED // CONNECTED TO MASTER ADMINISTRATIVE GMAIL ACCOUNT DIRECT ENTRY LINK NODES // PORTFOLIO DATA PIPELINE REPOSITORIES EXTENSION FILTERS: AUDIO WITH MP3 CHANNELS AND ICON BUTTON, VIDEO WITH MP4 PIPELINE AND ICON BUTTON, IMAGE WITH JPEG AND ICON BUTTON, DOCUMENT WITH PDF OR DOC AND ICON FUNCTIONAL BUTTON RUNNING STREAMS VERIFIED OK ⚡</h>⚡ 
+                </div>
+
+            </div>
+            
+
+
+            
+ <!.................................>
+
+
+
+ <!.................................>
+        </footer>
+
+    </div>
+
+    <!-- ================= JAVASCRIPT SYSTEM ENGINE LOGICS ARCHITECTURE MATRIX ================= -->
+    <script>
+        // In-Memory Virtual Mock Database Storage Block Registry (Initial Portfolio Seed Records)
+        let primaryDatabaseAssetRepositoryCollection = [
+            { id: 701, name: "Symphonic Master Ambient Acoustic Auditory Stream", type: "audio", src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3", extension: "MP3" },
+            { id: 702, name: "Cinematic Rendering Processing Framework Sample Sequence", type: "video", src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4", extension: "MP4" },
+            { id: 703, name: "Advanced Computing Mainframe Schematic Concept Visual Design", type: "image", src: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800", extension: "JPEG" },
+            { id: 704, name: "Distributed Infrastructure Maintenance Protocol Directory Registry", type: "document", src: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf", extension: "PDF" }
+        ];
+
+        // Volatile Processing Register Buffer for Target Device File Selection Metadata Data Payloads
+        let temporaryCapturedUploadPayloadObject = null;
+
+        // Strict Policy Rules Parameters Evaluation Map Structure (Allow vs Deny System Protocols)
+        const PRIMARY_ADMIN_SECURITY_Handshake_PROFILES = {
+            validUsernameId: "admin",
+            validPasskey: "1221",
+            linkedGmailAccount: "admin@gmail.com"
+        };
+        function switchLoginInterfaceLayout(targetWindowViewMode) {
+            const domNodeLoginForm = document.getElementById('adminAccessRequestForm');
+            const domNodeRecoveryForm = document.getElementById('adminKeyRecoveryForm');
+            const domNodeCoreTitleText = document.getElementById('loginPanelCoreTitle');
+            const domNodeAlertNotificationBox = document.getElementById('gatekeeperSecurityAlertNotification');
+            
+            domNodeAlertNotificationBox.classList.add('hidden');
+            if (targetWindowViewMode === 'forget') {
+                domNodeLoginForm.classList.add('hidden');
+                domNodeRecoveryForm.classList.remove('hidden');
+                domNodeCoreTitleText.innerText = "Gmail Bypass Matrix";
+            } else {
+                domNodeRecoveryForm.classList.add('hidden');
+                domNodeLoginForm.classList.remove('hidden');
+                domNodeCoreTitleText.innerText = "Mida Portal Ingress";
+            }
+        }
+
+        // Credentials Core Verification Logic Router Processing Node (ALLOW vs DENY Rules Enforcement Engine)
+        function evaluateAccessCredentials(eventInstance) {
+            eventInstance.preventDefault();
+            const fieldUserStringValue = document.getElementById('credentialUserField').value.trim();
+            const fieldPasswordStringValue = document.getElementById('credentialPasswordField').value;
+            const notificationBoxDomNode = document.getElementById('gatekeeperSecurityAlertNotification');
+            const loopLockGraphicIconNode = document.getElementById('lockGraphicIcon');
+
+            const criteriaUserMatch = (fieldUserStringValue === PRIMARY_ADMIN_SECURITY_Handshake_PROFILES.validUsernameId);
+            const criteriaGmailMatch = (fieldUserStringValue === PRIMARY_ADMIN_SECURITY_Handshake_PROFILES.linkedGmailAccount);
+            const criteriaPasswordMatch = (fieldPasswordStringValue === PRIMARY_ADMIN_SECURITY_Handshake_PROFILES.validPasskey);
+
+            if ((criteriaUserMatch || criteriaGmailMatch) && criteriaPasswordMatch) {
+                // ALLOW RULE PRIVILEGES CONTEXT LOGICAL VALIDATION TRIPPED PASSED
+                loopLockGraphicIconNode.className = "fa-solid fa-key-skeleton text-4xl text-emerald-400 animate-bounce";
+                notificationBoxDomNode.className = "mt-5 p-3.5 rounded-xl text-xs font-bold text-center bg-emerald-950/90 text-emerald-400 border border-emerald-800/50";
+                notificationBoxDomNode.innerText = "ACCESS METRIC GRANTED ALLOWED: Security handshake complete. Directing execution context routes...";
+                notificationBoxDomNode.classList.remove('hidden');
+                
+                // Adjust workspace header identification tracking badge metrics parameters array properties list
+                document.getElementById('authenticatedIdentityRegistryBadge').innerText = `Node Linked: ${PRIMARY_ADMIN_SECURITY_Handshake_PROFILES.linkedGmailAccount}`;
+
+                setTimeout(() => {
+                    document.getElementById('securityOverlayGatekeeper').classList.add('opacity-0');
+                    setTimeout(() => {
+                        document.getElementById('securityOverlayGatekeeper').classList.add('hidden');
+                        const mainDashboardDomNode = document.getElementById('systemDashboardCoreShell');
+                        mainDashboardDomNode.classList.remove('hidden');
+                        mainDashboardDomNode.classList.add('flex');
+                        setTimeout(() => mainDashboardDomNode.classList.remove('opacity-0'), 50);
+                        executeFilterDatabasePortfolioRows('all');
+                    }, 500);
+                }, 1000);
+            } else {
+                // DENY RULE CONTROL BLOCK ACTION PIPELINE DISPATCHED TRIGGERED
+                loopLockGraphicIconNode.className = "fa-solid fa-triangle-exclamation text-4xl text-rose-500 animate-bounce";
+                notificationBoxDomNode.className = "mt-5 p-3.5 rounded-xl text-xs font-bold text-center bg-rose-950/90 text-rose-400 border border-rose-800/50";
+                notificationBoxDomNode.innerText = "ACCESS POLICY EXCEPTION DENIED: Provided security tokens mismatch active matrix configuration settings.";
+                notificationBoxDomNode.classList.remove('hidden');
+            }
+        }
+
+        // Forgot Password Alphanumeric Configuration Bypass Endpoint Target Mailer Simulation Logic
+        function executeBypassRecoveryTokenDispatch(eventInstance) {
+            eventInstance.preventDefault();
+            const entryTargetGmailStringAddressValue = document.getElementById('recoveryTargetGmailField').value.trim();
+            const notificationBoxDomNode = document.getElementById('gatekeeperSecurityAlertNotification');
+            
+            notificationBoxDomNode.className = "mt-5 p-3.5 rounded-xl text-xs font-bold text-center bg-purple-950/90 text-purple-300 border border-purple-800/50";
+            notificationBoxDomNode.innerText = `Token restoration tracking variables script routed directly toward active connected admin Gmail registry mailbox address target node: ${entryTargetGmailStringAddressValue}`;
+            notificationBoxDomNode.classList.remove('hidden');
+        }
+
+        // Active Application Workspace Session Breakdown Pipeline Switch (Clears context memory states and loops user out to login)
+        function terminateActiveSecureSessionSequence() {
+            const mainDashboardDomNode = document.getElementById('systemDashboardCoreShell');
+            mainDashboardDomNode.classList.add('opacity-0');
+            
+            setTimeout(() => {
+                mainDashboardDomNode.classList.add('hidden');
+                mainDashboardDomNode.classList.remove('flex');
+                
+                const gatekeeperOverlayDomNode = document.getElementById('securityOverlayGatekeeper');
+                gatekeeperOverlayDomNode.classList.remove('hidden');
+                setTimeout(() => gatekeeperOverlayDomNode.classList.remove('opacity-0'), 50);
+                
+                document.getElementById('lockGraphicIcon').className = "fa-solid fa-cube text-3xl text-cyan-400 animate-spin";
+                document.getElementById('credentialPasswordField').value = "";
+                
+                const notificationBoxDomNode = document.getElementById('gatekeeperSecurityAlertNotification');
+                notificationBoxDomNode.className = "mt-5 p-3.5 rounded-xl text-xs font-bold text-center bg-amber-950/90 text-amber-400 border border-amber-800/50";
+                notificationBoxDomNode.innerText = "Secure administration network linkage dropped context frames. System logged out safely.";
+                notificationBoxDomNode.classList.remove('hidden');
+            }, 600);
+        }
+
+        // Administrative Custom Layout UI brand Customizer Vector Modification Triggers
+        function executeBrandLogoSymbolTransformation() {
+            const promptFontAwesomeClassStringInput = prompt("Input target FontAwesome vector icon representation class code text segment to load up:", "fa-solid fa-atom");
+            if (promptFontAwesomeClassStringInput && promptFontAwesomeClassStringInput.trim() !== "") {
+                document.getElementById('systemLogoIdentityBadgeNode').innerHTML = `<i class="${promptFontAwesomeClassStringInput.trim()} group-hover:text-white transition"></i>`;
+            }
+        }
+
+        function executeBrandTextTransformation() {
+            const promptInstitutionTextStringValue = prompt("Input new alphanumeric custom text configuration string value to redefine core Header Branding parameters text context:");
+            if (promptInstitutionTextStringValue && promptInstitutionTextStringValue.trim() !== "") {
+                document.getElementById('brandInstitutionTitleNode').innerText = promptInstitutionTextStringValue.trim().toUpperCase();
+            }
+        }
+
+        function toggleSystemSettingsInterfaceDisplay(shouldDisplayFlagParameterValue) {
+            const settingsModalOverlayDomNodeReference = document.getElementById('systemGlobalConfigurationSettingsPanel');
+            if (shouldDisplayFlagParameterValue) {
+                settingsModalOverlayDomNodeReference.classList.remove('hidden');
+                settingsModalOverlayDomNodeReference.classList.add('flex');
+            } else {
+                settingsModalOverlayDomNodeReference.classList.add('hidden');
+                settingsModalOverlayDomNodeReference.classList.remove('flex');
+            }
+        }
+
+        function displayAboutInformationModalDialog() {
+            alert("Mida Gallery Core Management Infrastructure Terminal Platform Module\nBuild Architecture Compilation Kernel Code Version Reference: v8.2.11 Enterprise\nIngress Tunnel Route Status: Verified Secure Admin Gmail Interface Pipe Active.");
+        }
+
+        function displayContactInformationModalDialog() {
+            alert(`Technical Ops Command Desk Communications Hub:\nPrimary Assistance Node Link: devops-matrix@mida-gallery-networks.internal\nRegistered Operations Authority Access Gmail Profile Node: ${PRIMARY_ADMIN_SECURITY_Handshake_PROFILES.linkedGmailAccount}`);
+        }
+
+        // Hardware Data Stream Blob Extraction Processing Pipeline (Handles Direct Local Laptop Computer and Mobile Inputs)
+        function extractDeviceFileSelectionMetadataParameters(inputTargetDomNodeReference) {
+            const selectedDeviceFileItemObject = inputTargetDomNodeReference.files[0];
+            if (!selectedDeviceFileItemObject) return;
+
+            const splitNameTokensArray = selectedDeviceFileItemObject.name.split('.');
+            const inferredExtensionKeyString = splitNameTokensArray[splitNameTokensArray.length - 1].toUpperCase();
+            
+            let structuredTypeCategorizationKey = "";
+            if (['MP3', 'WAV', 'M4A', 'FLAC', 'OGG'].includes(inferredExtensionKeyString)) structuredTypeCategorizationKey = "audio";
+            else if (['MP4', 'MOV', 'AVI', 'MKV', 'WEBM'].includes(inferredExtensionKeyString)) structuredTypeCategorizationKey = "video";
+            else if (['JPG', 'JPEG', 'PNG', 'GIF', 'WEBP'].includes(inferredExtensionKeyString)) structuredTypeCategorizationKey = "image";
+            else if (['PDF', 'DOC', 'DOCX', 'TXT', 'XLS'].includes(inferredExtensionKeyString)) structuredTypeCategorizationKey = "document";
+            else structuredTypeCategorizationKey = "document"; // Generic fallback wrapper default routing channel assignment
+
+            // Establish volatile real browser dynamic instance object blob link connection to play back local device uploads
+            const generatedBrowserSessionMemoryBlobUrlLink = URL.createObjectURL(selectedDeviceFileItemObject);
+
+            temporaryCapturedUploadPayloadObject = {
+                name: selectedDeviceFileItemObject.name.replace(/\.[^/.]+$/, ""), // Filter structural file name string clear of format syntax lines
+                type: structuredTypeCategorizationKey,
+                extension: inferredExtensionKeyString,
+                src: generatedBrowserSessionMemoryBlobUrlLink
+            };
+
+            document.getElementById('hardwareDeviceFileUploadPlaceholderLabelText').innerText = `[${inferredExtensionKeyString}] ${selectedDeviceFileItemObject.name}`;
+        }
+
+        // Commit and Push Newly Ingested Computer/Mobile Upload Payloads into Virtual Database Repositories
+        function commitSelectedFileToPortfolioDatabaseRegistry() {
+            const fieldInputCustomNameStringValue = document.getElementById('ingestAssetCustomNameInput').value.trim();
+            
+            if (!temporaryCapturedUploadPayloadObject) {
+                alert("Terminal Warning Message: Data payload packaging rejected. No target resource item file was processed out from local device directory channels yet.");
+                return;
+            }
+
+            const finalResolvedAssetIdentityLabelString = (fieldInputCustomNameStringValue !== "") ? fieldInputCustomNameStringValue : temporaryCapturedUploadPayloadObject.name;
+
+            const structuredDataRecordObjectInstance = {
+                id: Date.now(),
+                name: finalResolvedAssetIdentityLabelString,
+                type: temporaryCapturedUploadPayloadObject.type,
+                src: temporaryCapturedUploadPayloadObject.src,
+                extension: temporaryCapturedUploadPayloadObject.extension
+            };
+
+            // Unshift target object data records item configuration layout variables directly into primary runtime data database collections array index
+            primaryDatabaseAssetRepositoryCollection.unshift(structuredDataRecordObjectInstance);
+
+            // Clean down volatile memory register buffers state allocations completely and restore placeholders metrics
+            temporaryCapturedUploadPayloadObject = null;
+            document.getElementById('ingestAssetCustomNameInput').value = "";
+            document.getElementById('nativeHardwareDeviceFileInputTrigger').value = "";
+            document.getElementById('hardwareDeviceFileUploadPlaceholderLabelText').innerText = "Select local resource file...";
+
+            alert("Ingest Interface Log Note: Target system file stream uploaded, indexed, and committed onto virtual active layout collection registers schema lines successfully.");
+            executeFilterDatabasePortfolioRows('all');
+        }
+
+        // Dynamic 3D Portfolio Grid Construction Compiler Engine Grid Processors Mapping Routine Method
+        function executeFilterDatabasePortfolioRows(targetFilteringCategoryStringKey = 'all') {
+            const portfolioGridDomContainerTargetNode = document.getElementById('applicationMediaGridPortfolioDomContainer');
+            const systemActiveFilterTextLabelBadgeNode = document.getElementById('activeGridFilterBadgeDisplay');
+            
+            systemActiveFilterTextLabelBadgeNode.innerText = `Scope Index: ${targetFilteringCategoryStringKey.toUpperCase()}`;
+            portfolioGridDomContainerTargetNode.innerHTML = "";
+
+            const filteredAssetRowsDataProcessingList = (targetFilteringCategoryStringKey === 'all') 
+                ? primaryDatabaseAssetRepositoryCollection 
+                : primaryDatabaseAssetRepositoryCollection.filter(rowItem => rowItem.type === targetFilteringCategoryStringKey);
+
+            if (filteredAssetRowsDataProcessingList.length === 0) {
+                portfolioGridDomContainerTargetNode.innerHTML = `
+                    <div class="col-span-full border border-dashed border-white/10 text-center p-12 text-slate-500 rounded-2xl bg-black/20">
+                        <i class="fa-solid fa-folder-closed text-2xl mb-2.5 block text-slate-700 animate-pulse"></i> Selected virtual storage network index segment contains no matching media resource profiles entries.
+                    </div>`;
+                return;
+            }
+
+            filteredAssetRowsDataProcessingList.forEach(assetItemRowData => {
+                let trackingTypeVectorIconNodeString = "";
+                let thematicColorStyleClassMappingString = "";
+                
+                switch (assetItemRowData.type) {
+                    case 'audio': 
+                        trackingTypeVectorIconNodeString = '<i class="fa-solid fa-music text-amber-400 text-sm animate-pulse"></i>'; 
+                        thematicColorStyleClassMappingString = 'bg-amber-950/50 text-amber-400 border-amber-800/50';
+                        break;
+                    case 'video': 
+                        trackingTypeVectorIconNodeString = '<i class="fa-solid fa-video text-rose-400 text-sm"></i>'; 
+                        thematicColorStyleClassMappingString = 'bg-rose-950/50 text-rose-400 border-rose-800/50';
+                        break;
+                    case 'image': 
+                        trackingTypeVectorIconNodeString = '<i class="fa-solid fa-file-image text-cyan-400 text-sm"></i>'; 
+                        thematicColorStyleClassMappingString = 'bg-cyan-950/50 text-cyan-400 border-cyan-800/50';
+                        break;
+                    case 'document': 
+                        trackingTypeVectorIconNodeString = '<i class="fa-solid fa-file-shield text-emerald-400 text-sm"></i>'; 
+                        thematicColorStyleClassMappingString = 'bg-emerald-950/50 text-emerald-400 border-emerald-800/50';
+                        break;
+                }
+
+                const generatedCardShellDomElement = document.createElement('div');
+                generatedCardShellDomElement.className = "bg-slate-950/60 border border-white/5 rounded-2xl p-4 flex flex-col justify-between relative group overflow-hidden transition-all duration-300 hover:border-white/10 shadow-lg min-h-[10rem] card-3d-element";
+                generatedCardShellDomElement.innerHTML = `
+                    <div class="flex items-start justify-between mb-3">
+                        <div class="w-9 h-9 bg-black/60 rounded-xl border border-slate-800 flex items-center justify-center shadow-inner">
+                            ${trackingTypeVectorIconNodeString}
+                        </div>
+                        <span class="text-[9px] font-mono font-bold px-2 py-0.5 rounded border uppercase tracking-wider ${thematicColorStyleClassMappingString}">
+                            .${assetItemRowData.extension} Type Node Included
+                        </span>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-black text-slate-200 truncate pr-2" title="${assetItemRowData.name}">${assetItemRowData.name}</h4>
+                        <p class="text-[9px] font-mono text-slate-600 font-bold mt-1">Memory Pipeline Reference Hash ID: ${assetItemRowData.id}</p>
+                    </div>
+
+                    <!-- HOVER CONTROL OVERLAY WITH INTERACTIVE OVERLAY ICON BUTTONS AND TEXT ANIMATION ACTION CHANNELS -->
+                    <div class="absolute inset-0 bg-black/95 backdrop-blur-sm opacity-0 group-hover:opacity-100 flex flex-col items-center justify-center p-3 transition-all duration-300">
+                        <!-- Text animation title inside interactive hover card overlay -->
+                        <span class="text-[9px] text-slate-500 uppercase font-black tracking-widest mb-3 border-b border-white/5 pb-1 animate-pulse">Media Action Handshaker Node</span>
+                        <div class="flex items-center gap-2">
+                            <!-- Overlay Action Button: Launch Fullscreen Multimedia Visualization Graphic Portal -->
+                            <button onclick="launchFullscreenVisualizationPortal('${assetItemRowData.type}', '${assetItemRowData.src}', '${assetItemRowData.name}')" class="p-2.5 bg-slate-900 hover:bg-cyan-600 text-cyan-400 hover:text-black rounded-xl text-[9px] font-black uppercase tracking-wider transition duration-200 flex flex-col items-center gap-1 shadow cursor-pointer" title="Expand Full Screen Asset Graphic Layout Visualizer Rendering">
+                                <i class="fa-solid fa-expand text-xs"></i> Full Graphic
+                            </button>
+                            <!-- Overlay Action Button: Trigger Simulated Client File Save Download Ingestion Packaging -->
+                            <button onclick="executeAssetDownloadPackagingAction('${assetItemRowData.name}', '${assetItemRowData.src}')" class="p-2.5 bg-slate-900 hover:bg-emerald-600 text-emerald-400 hover:text-black rounded-xl text-[9px] font-black uppercase tracking-wider transition duration-200 flex flex-col items-center gap-1 shadow cursor-pointer" title="Download Resource Binary Blocks to Local Client Hardware Storage Drive">
+                                <i class="fa-solid fa-download text-xs"></i> Save/Download
+                            </button>
+                            <!-- Overlay Action Button: Destructive Purge Delete Database Record Entry Row -->
+                            <button onclick="purgeDataAssetRowEntryIndexConfiguration(${assetItemRowData.id})" class="p-2.5 bg-slate-900 hover:bg-rose-600 text-rose-400 hover:text-black rounded-xl text-[9px] font-black uppercase tracking-wider transition duration-200 flex flex-col items-center gap-1 shadow cursor-pointer" title="Wipe resource record item from active session dataset configuration lists memory allocation">
+                                <i class="fa-solid fa-trash-can text-xs"></i> Delete File
+                            </button>
+                        </div>
+                    </div>
+                `;
+                portfolioGridDomContainerTargetNode.appendChild(generatedCardShellDomElement);
+            });
+        }
+
+        // Operational Actions Framework Processing: Client File Download Packaging Data Extraction Tunnels & Purges
+        function executeAssetDownloadPackagingAction(targetFilenameLabelContextString, sourceDataUrlLinkString) {
+            const temporaryDownloadProxyAnchorNodeElement = document.createElement('a');
+            temporaryDownloadProxyAnchorNodeElement.href = sourceDataUrlLinkString;
+            temporaryDownloadProxyAnchorNodeElement.download = targetFilenameLabelContextString;
+            document.body.appendChild(temporaryDownloadProxyAnchorNodeElement);
+            temporaryDownloadProxyAnchorNodeElement.click();
+            document.body.removeChild(temporaryDownloadProxyAnchorNodeElement);
+            
+            alert(`File Download Core Protocol Dispatch: Dynamic transmission stream compiled. Local file system storage disk ingestion triggered for data reference target block record item: "${targetFilenameLabelContextString}".`);
+        }
+
+        function purgeDataAssetRowEntryIndexConfiguration(targetIdentificationReferenceId) {
+            if (confirm("Confirm Command: Execute definitive structural wipe parameters on target database row entry allocation matrix? This adaptation cannot be reversed across the alive session frame block scope.")) {
+                primaryDatabaseAssetRepositoryCollection = primaryDatabaseAssetRepositoryCollection.filter(elementNode => elementNode.id !== targetIdentificationReferenceId);
+                executeFilterDatabasePortfolioRows('all');
+            }
+        }
+
+        // Full Screen Animated Graphics Lightbox Portal Visualizer Viewport Frame Control Loop Engine
+        function launchFullscreenVisualizationPortal(typeStringClassificationValue, sourceMediaPayloadUrl, designLabelTextContextString) {
+            const visualizerDisplayPortalContentAnchorDomNode = document.getElementById('fullscreenMediaAnchorNode');
+            const visualizerDisplayPortalTitleLabelDomNode = document.getElementById('fullscreenVisualizerTitleLabelText');
+            
+            visualizerDisplayPortalContentAnchorDomNode.innerHTML = "";
+            visualizerDisplayPortalTitleLabelDomNode.innerText = designLabelTextContextString;
+
+            if (typeStringClassificationValue === 'image') {
+                visualizerDisplayPortalContentAnchorDomNode.innerHTML = `<img src="${sourceMediaPayloadUrl}" class="max-w-full max-h-[70vh] object-contain rounded-2xl border border-white/10 shadow-2xl transition transform hover:scale-102">`;
+            } else if (typeStringClassificationValue === 'video') {
+                visualizerDisplayPortalContentAnchorDomNode.innerHTML = `<video src="${sourceMediaPayloadUrl}" controls autoplay class="w-full max-h-[70vh] bg-black rounded-2xl border border-white/10 shadow-2xl"></video>`;
+            } else if (typeStringClassificationValue === 'audio') {
+                visualizerDisplayPortalContentAnchorDomNode.innerHTML = `
+                    <div class="bg-gradient-to-b from-slate-900 to-slate-950 border border-white/10 p-12 rounded-3xl text-center max-w-md w-full space-y-6 shadow-2xl relative" style="transform-style: preserve-3d; transform: rotateX(4deg);">
+                        <div class="flex items-end justify-center space-x-2 h-12 mx-auto">
+                            <span class="eq-bar w-2 bg-gradient-to-t from-amber-600 to-amber-400 rounded-full" style="animation-duration: 0.4s"></span>
+                            <span class="eq-bar w-2 bg-gradient-to-t from-amber-600 to-amber-400 rounded-full" style="animation-duration: 0.7s"></span>
+                            <span class="eq-bar w-2 bg-gradient-to-t from-amber-600 to-amber-400 rounded-full" style="animation-duration: 0.3s"></span>
+                            <span class="eq-bar w-2 bg-gradient-to-t from-amber-600 to-amber-400 rounded-full" style="animation-duration: 0.9s"></span>
+                            <span class="eq-bar w-2 bg-gradient-to-t from-amber-600 to-amber-400 rounded-full" style="animation-duration: 0.5s"></span>
+                        </div>
+                        <p class="text-[10px] text-slate-500 tracking-widest font-mono uppercase font-black">Live Graphical Equalizer Wave Processing Connected</p>
+                        <audio src="${sourceMediaPayloadUrl}" controls autoplay class="w-full shadow-inner drop-shadow"></audio>
+                    </div>`;
+            } else if (typeStringClassificationValue === 'document') {
+                visualizerDisplayPortalContentAnchorDomNode.innerHTML = `
+                    <div class="bg-gradient-to-b from-slate-900 to-slate-950 border border-white/10 p-8 rounded-3xl text-center max-w-md w-full space-y-5 shadow-2xl">
+                        <div class="w-16 h-16 bg-emerald-500/10 rounded-2xl flex items-center justify-center mx-auto border border-emerald-500/20 shadow-inner">
+                            <i class="fa-solid fa-file-pdf text-3xl text-emerald-400 animate-bounce"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs font-black text-white uppercase tracking-wider">Isolated Virtual Document Storage Sandbox</p>
+                            <p class="text-[10px] text-slate-500 mt-1 font-mono font-bold">Secure Environment Frame Cryptographic Verification Active</p>
+                        </div>
+                        <a href="${sourceMediaPayloadUrl}" target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-black py-3.5 px-6 rounded-xl text-[10px] uppercase tracking-widest transition transform active:scale-95 shadow-lg border border-white/10">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Fire Sandbox Viewport Reader Frame
+                        </a>
+                    </div>`;
+            }
+
+            document.getElementById('fullscreenVisualizationPortal').classList.remove('hidden');
+            document.getElementById('fullscreenVisualizationPortal').classList.add('flex');
+        }
+
+        function terminateFullscreenPortalDisplay() {
+            document.getElementById('fullscreenMediaAnchorNode').innerHTML = ""; // Force instantly close and clean active media running codec tracking threads to prevent audio leakage leaking out
+            document.getElementById('fullscreenVisualizationPortal').classList.add('hidden');
+            document.getElementById('fullscreenVisualizationPortal').classList.remove('flex');
+        }
+    </script>
+</body>
+</html>
